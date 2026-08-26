@@ -28,6 +28,33 @@ This public repository is the staff-managed source for homework skeletons. Stude
 
 `origin` must be your private repository. `staff` must be this public repository. Students should push their work to `origin`, not `staff`.
 
+## Python environment
+
+HW0 is tested with Python 3.13. From the repository root on macOS or Linux, create an isolated environment and install the assignment dependencies:
+
+```bash
+python3 --version  # should report Python 3.13.x
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r hw0/requirements.txt
+python -c "import otter, numpy; print('Environment ready')"
+python -m jupyterlab
+```
+
+On Windows PowerShell, activate the environment with:
+
+```powershell
+py -3.13 -m venv .venv
+.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+python -m pip install -r hw0\requirements.txt
+python -c "import otter, numpy; print('Environment ready')"
+python -m jupyterlab
+```
+
+Open `hw0/HW0.ipynb` from JupyterLab. Run the import check successfully before opening the assignment.
+
 ## Getting a newly released assignment
 
 Commit your current work first, then run:

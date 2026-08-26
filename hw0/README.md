@@ -2,6 +2,8 @@
 
 Complete `HW0.ipynb` in this directory.
 
+Set up the Python environment from the repository root using the instructions in the main `README.md`, then launch JupyterLab with `python -m jupyterlab` and open `hw0/HW0.ipynb`.
+
 Before submitting:
 
 1. Restart the kernel and run all cells from top to bottom.
