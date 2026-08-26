@@ -16,7 +16,6 @@ This public repository is the staff-managed source for homework skeletons. Stude
 
    ```bash
    git remote rename origin staff
-   git remote set-url --push staff DISABLED
    git remote add origin https://github.com/YOUR_GITHUB_USERNAME/eecs106a-fa26.git
    git push -u origin main
    ```
@@ -27,7 +26,7 @@ This public repository is the staff-managed source for homework skeletons. Stude
    git remote -v
    ```
 
-`origin` must be your private repository. `staff` must fetch from this public repository and show `DISABLED` as its push target; students should never push to the staff repository.
+`origin` must be your private repository. `staff` must be this public repository. Students should push their work to `origin`, not `staff`.
 
 ## Getting a newly released assignment
 
