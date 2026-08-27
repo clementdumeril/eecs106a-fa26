@@ -1,6 +1,15 @@
 # EECS C106A Fall 2026 Homework Skeletons
 
-This public repository is the staff-managed source for homework skeletons. Students keep one private repository for the semester and pull new assignments from this repository as they are released.
+This public repository contains the starter code and public checks for EECS C106A homework. Keep one private repository for the semester, pull assignments from this repository, and submit your work through Gradescope.
+
+## Assignments
+
+| Assignment | Instructions | File to complete |
+| --- | --- | --- |
+| HW0: Python Bootcamp | [HW0 README](hw0/README.md) | `hw0/HW0.ipynb` |
+| HW1: Vehicle Coordinate Transformations | [HW1 README](hw1/README.md) | `hw1/hw1.py` |
+
+The assignment handout provides the full problem statement and any additional submission requirements.
 
 ## One-time setup
 
@@ -30,53 +39,60 @@ This public repository is the staff-managed source for homework skeletons. Stude
 
 ## Python environment
 
-HW0 is tested with Python 3.13. From the repository root on macOS or Linux, create an isolated environment and install the assignment dependencies:
+The course environment is tested with Python 3.13.5. Use Python 3.13 and one virtual environment for the semester. From the repository root on macOS or Linux:
 
 ```bash
 python3 --version  # should report Python 3.13.x
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
-python -m pip install -r hw0/requirements.txt
-python -c "import otter, numpy; print('Environment ready')"
-python -m jupyterlab
 ```
 
-On Windows PowerShell, activate the environment with:
+On Windows PowerShell:
 
 ```powershell
 py -3.13 -m venv .venv
 .venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
-python -m pip install -r hw0\requirements.txt
-python -c "import otter, numpy; print('Environment ready')"
-python -m jupyterlab
 ```
 
-Open `hw0/HW0.ipynb` from JupyterLab. Run the import check successfully before opening the assignment.
+Activate this environment whenever you open a new terminal. Install the dependencies for the assignment you are working on:
+
+```bash
+python -m pip install -r hw0/requirements.txt  # HW0
+python -m pip install -r hw1/requirements.txt  # HW1
+```
+
+For HW0, run `python -m jupyterlab` and open `hw0/HW0.ipynb`. HW1 uses Python scripts; its README explains the self-checker and visualizer.
 
 ## Getting a newly released assignment
 
 Commit your current work first, then run:
 
 ```bash
-git pull staff main
+git pull --no-rebase staff main
 git push origin main
 ```
 
-Staff normally add new assignment directories without changing previously released notebooks, so these pulls should merge cleanly.
+Install the new assignment's dependencies and follow its README. If Git reports conflicts, resolve them while preserving your answers before committing and pushing the merge. Ask course staff for help if you are unsure.
 
 ## Submitting to Gradescope
 
-After completing an assignment:
+Run the assignment's local checks and save your work. Commit and push only the files you intend to submit. For example, for HW1:
 
 ```bash
 git status
-git add hw0/HW0.ipynb
-git commit -m "Complete HW0"
+git add hw1/hw1.py
+git commit -m "Complete HW1"
 git push origin main
 ```
 
-Open Gradescope directly, choose the GitHub submission method, select your private `eecs106a-fa26` repository and the `main` branch, and verify that the intended notebook is present. Saving locally is not enough: the notebook must be committed and pushed before submission.
+For HW0, stage `hw0/HW0.ipynb` instead. Keep each assignment in its original directory.
 
-Never add solutions, credentials, access tokens, or unrelated private material to this repository or to a submission.
+Open Gradescope directly, choose the assignment and GitHub submission method, then select your private `eecs106a-fa26` repository and its `main` branch. Verify that the intended files and latest commit are included, and review the grading results. After making corrections, commit, push, and resubmit.
+
+Saving locally or pushing to GitHub does not create a Gradescope submission. Passing public checks does not guarantee full credit on the additional grading tests.
+
+## Repository hygiene
+
+Keep your coursework repository private. Do not commit credentials, access tokens, or unrelated private files. Generated `.OTTER_LOG`, `__pycache__/`, notebook checkpoints, and virtual environments are ignored automatically; they are not assignment deliverables.
