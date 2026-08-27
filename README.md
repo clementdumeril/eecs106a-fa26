@@ -7,7 +7,7 @@ This public repository contains the starter code and public checks for EECS C106
 | Assignment | Instructions | File to complete |
 | --- | --- | --- |
 | HW0: Python Bootcamp | [HW0 README](hw0/README.md) | `hw0/HW0.ipynb` |
-| HW1: Vehicle Coordinate Transformations | [HW1 README](hw1/README.md) | `hw1/hw1.py` |
+| HW1: Vehicle Coordinate Transformations | Assignment handout and [starter docstring](hw1/hw1.py) | `hw1/hw1.py` |
 
 The assignment handout provides the full problem statement and any additional submission requirements.
 
@@ -63,7 +63,12 @@ python -m pip install -r hw0/requirements.txt  # HW0
 python -m pip install -r hw1/requirements.txt  # HW1
 ```
 
-For HW0, run `python -m jupyterlab` and open `hw0/HW0.ipynb`. HW1 uses Python scripts; its README explains the self-checker and visualizer.
+For HW0, run `python -m jupyterlab` and open `hw0/HW0.ipynb`.
+
+For HW1, implement `get_corners` in `hw1/hw1.py`, then run `python hw1/check_hw1.py`
+and `python hw1/car_vis.py`. Use `python hw1/car_vis.py --path-only` to view the
+trajectory before implementing the function, or add `--save parking.png` to
+save a plot without opening a window.
 
 ## Getting a newly released assignment
 
@@ -74,7 +79,7 @@ git pull --no-rebase staff main
 git push origin main
 ```
 
-Install the new assignment's dependencies and follow its README. If Git reports conflicts, resolve them while preserving your answers before committing and pushing the merge. Ask course staff for help if you are unsure.
+Install the new assignment's dependencies and follow its handout and repository instructions. If Git reports conflicts, resolve them while preserving your answers before committing and pushing the merge. Ask course staff for help if you are unsure.
 
 ## Submitting to Gradescope
 
